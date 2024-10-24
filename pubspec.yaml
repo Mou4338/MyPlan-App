@@ -68,7 +68,6 @@ flutter:
      - assets/images/splash_screen/6.png 
      - assets/images/splash_screen/7.png
      - assets/images/splash_screen/8.png
-     - assets/images/splash_screen/9.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
