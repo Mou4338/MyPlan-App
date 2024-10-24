@@ -30,51 +30,51 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image(
                   image: AssetImage('assets/images/splash_screen/2.png'))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
-              left: animate? -40: -110,
+              duration: const Duration(milliseconds: 1000),
+              left: animate? -40: -200,
               bottom:25,
               right: 0,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/3.png'))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1000),
               top: 35,
-              right: animate? 0: -70,
+              right: animate? 0: -160,
               left: -40,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/6.png'))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1000),
               top: 50,
-              left: animate? -10:-80,
+              left: animate? -10:-170,
               right: -30,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/5.png'))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1000),
               top: 50,
-              left: animate?-10: -80,
+              left: animate?-10: -170,
               right: -30,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/4.png'))),
               AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1000),
               top: 35,
-              left: animate? 0: -70,
+              left: animate? 0: -160,
               right: -40,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/7.png'))),
               AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1000),
               bottom:0,
-              right: animate? 0: -70,
+              right: animate? 0: -160,
               left: -40,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/8.png'))),
               AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1000),
               bottom: 0,
-              left: animate? 0: -70,
+              left: animate? 0: -160,
               right: -60,
               child: Image(
                   image: AssetImage('assets/images/splash_screen/9.png'))),
