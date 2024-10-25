@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/welcomepage.dart';
+import 'package:flutter_application_1/screens/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -30,59 +30,65 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image(
                   image: AssetImage('assets/images/splash_screen/2.png'))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1500),
               right: animate? 15: -175,
               bottom:90,
               left: 15,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
               child: Image(
-                  image: AssetImage('assets/images/splash_screen/3.png'))),
+                  image: AssetImage('assets/images/splash_screen/3.png')))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1500),
               top: 35,
               right: animate? 0: -160,
               left: -40,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
               child: Image(
-                  image: AssetImage('assets/images/splash_screen/6.png'))),
+                  image: AssetImage('assets/images/splash_screen/6.png')))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1000),
-              top: 55,
-              left: animate? -10:-170,
-              right: -30,
+              duration: const Duration(milliseconds: 1500),
+              top: 60,
+              left: animate? 0:-160,
+              right: 0,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
               child: Image(
-                  image: AssetImage('assets/images/splash_screen/5.png'))),
+                image: AssetImage('assets/images/splash_screen/5.png')))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1000),
-              top: 55,
-              left: animate?-10: -170,
-              right: -30,
+              duration: const Duration(milliseconds: 1500),
+              top: 70,
+              left: animate? 0: -160,
+              right: 0,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
               child: Image(
-                  image: AssetImage('assets/images/splash_screen/4.png'))),
+                  image: AssetImage('assets/images/splash_screen/4.png')))),
               AnimatedPositioned(
-              duration: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1500),
               top: 35,
               left: animate? 0: -160,
               right: -40,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
               child: Image(
-                  image: AssetImage('assets/images/splash_screen/7.png'))),
+                  image: AssetImage('assets/images/splash_screen/7.png')))),
               AnimatedPositioned(
-              duration: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1500),
               bottom:0,
               right: animate? 0: -160,
               left: -40,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
               child: Image(
-                  image: AssetImage('assets/images/splash_screen/8.png'))),
+                  image: AssetImage('assets/images/splash_screen/8.png')))),
         ],
       ),
     );
   }
 
   Future startAnimation() async {
-    await Future.delayed(Duration(milliseconds: 500));
+    await Future.delayed(Duration(milliseconds: 1000));
     setState(() {
       animate = true;
     });
-    await Future.delayed(Duration(milliseconds: 15000));
+    await Future.delayed(Duration(milliseconds: 12000));
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => Accountpage()));
+        context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
   }
 }

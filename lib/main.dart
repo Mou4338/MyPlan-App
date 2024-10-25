@@ -2,6 +2,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/homepage.dart';
 import 'package:flutter_application_1/pages/welcomepage.dart';
+import 'package:flutter_application_1/screens/onboarding_screen.dart';
 import 'package:flutter_application_1/screens/splash_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
 void main() async{
@@ -32,8 +33,9 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         initialRoute: '/splash',
         routes: {
-          '/splash':(context)=>SplashScreen(),
-          '/account':(context)=>Accountpage(),
+          '/splash':(context)=> SplashScreen(),
+          '/onboard':(context)=>OnboardingScreen(),
+          '/account':(context)=> Accountpage(),
           '/home': (context) => HomePage(),
      },
     ),
