@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/onboarding_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,6 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        alignment: Alignment.center,
         children: [
           Positioned(
                top: 0,
@@ -30,53 +32,23 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image(
                   image: AssetImage('assets/images/splash_screen/2.png'))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1500),
-              right: animate? 15: -175,
-              bottom:90,
-              left: 15,
-              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
+              duration: const Duration(milliseconds: 1000),
+              top: animate? 130: -110,
+              right:45,
+              left: 45,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1000),
               child: Image(
                   image: AssetImage('assets/images/splash_screen/3.png')))),
           AnimatedPositioned(
-              duration: const Duration(milliseconds: 1500),
-              top: 35,
-              right: animate? 0: -160,
-              left: -40,
-              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
-              child: Image(
-                  image: AssetImage('assets/images/splash_screen/6.png')))),
-          AnimatedPositioned(
-              duration: const Duration(milliseconds: 1500),
-              top: 60,
-              left: animate? 0:-160,
+              duration: const Duration(milliseconds: 1000),
+              top: 155,
+              left: 0,
               right: 0,
-              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
+              bottom: animate? 30:-240,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1000),
               child: Image(
-                image: AssetImage('assets/images/splash_screen/5.png')))),
-          AnimatedPositioned(
-              duration: const Duration(milliseconds: 1500),
-              top: 70,
-              left: animate? 0: -160,
-              right: 0,
-              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
-              child: Image(
-                  image: AssetImage('assets/images/splash_screen/4.png')))),
-              AnimatedPositioned(
-              duration: const Duration(milliseconds: 1500),
-              top: 35,
-              left: animate? 0: -160,
-              right: -40,
-              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
-              child: Image(
-                  image: AssetImage('assets/images/splash_screen/7.png')))),
-              AnimatedPositioned(
-              duration: const Duration(milliseconds: 1500),
-              bottom:0,
-              right: animate? 0: -160,
-              left: -40,
-              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 1500),
-              child: Image(
-                  image: AssetImage('assets/images/splash_screen/8.png')))),
+                image: AssetImage('assets/images/splash_screen/1.png')))),
+            textline(),
         ],
       ),
     );
@@ -87,8 +59,48 @@ class _SplashScreenState extends State<SplashScreen> {
     setState(() {
       animate = true;
     });
-    await Future.delayed(Duration(milliseconds: 12000));
+    await Future.delayed(Duration(milliseconds: 10000));
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
+  }
+}
+
+class textline extends StatefulWidget {
+  const textline({super.key});
+
+  @override
+  State<textline> createState() => _textlineState();
+}
+
+class _textlineState extends State<textline> {
+  bool animate = false;
+
+   @override
+  void initState() {
+    super.initState();
+    StartAnimation();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedPositioned(
+      duration: const Duration(milliseconds: 4000),
+              top: 575,
+              right: 57,
+              left: 57,
+              child: AnimatedOpacity(opacity: animate? 1: 0, duration: const Duration(milliseconds: 4000),
+              child: Text('Plan Your Day Wisely',style: GoogleFonts.arima(
+                textStyle: TextStyle(color: Colors.black),
+                fontSize: 28.0,
+                fontWeight: FontWeight.w600,
+              ))
+              )
+    );
+  }
+  void StartAnimation() async {
+    await Future.delayed(Duration(milliseconds: 3000));
+    setState(() {
+      animate = true;
+    });
   }
 }

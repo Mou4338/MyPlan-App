@@ -36,7 +36,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 'assets/images/onboarding_screen/on2.png')),
                       ),
                       Positioned(
-                        top: 0,
+                        top: 10,
                         left: 0,
                         right: 0,
                         child: Image(
@@ -44,9 +44,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 'assets/images/onboarding_screen/on1.png')),
                       ),
                       Positioned(
-                          top: -10,
-                          left: 5,
-                          right: 220,
+                          top: -8,
+                          left: 3,
+                          right: 222,
                           child: Image(
                               image: AssetImage(
                                   'assets/images/splash_screen/5.png'))),
@@ -100,17 +100,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 'assets/images/onboarding_screen/on4.png')),
                       ),
                       Positioned(
-                        top: 15,
-                        left: 15,
-                        right: 15,
+                        top: 25,
+                        left: 22,
+                        right: 22,
                         child: Image(
                             image: AssetImage(
                                 'assets/images/onboarding_screen/on3.png')),
                       ),
                       Positioned(
-                          top: -10,
-                          left: 5,
-                          right: 220,
+                          top: -8,
+                          left: 3,
+                          right: 222,
                           child: Image(
                               image: AssetImage(
                                   'assets/images/splash_screen/5.png'))),
@@ -164,7 +164,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 'assets/images/onboarding_screen/on6.png')),
                       ),
                       Positioned(
-                        top: 15,
+                        top: 20,
                         left: 12,
                         right: 12,
                         child: Image(
@@ -172,9 +172,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 'assets/images/onboarding_screen/on5.png')),
                       ),
                       Positioned(
-                          top: -10,
-                          left: 5,
-                          right: 220,
+                          top: -8,
+                          left: 3,
+                          right: 222,
                           child: Image(
                               image: AssetImage(
                                   'assets/images/splash_screen/5.png'))),
@@ -228,17 +228,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 'assets/images/onboarding_screen/on8.png')),
                       ),
                       Positioned(
-                        top: 15,
-                        left: 12,
-                        right: 12,
+                        top: 10,
+                        left: 10,
+                        right: 10,
                         child: Image(
                             image: AssetImage(
                                 'assets/images/onboarding_screen/on7.png')),
                       ),
                       Positioned(
-                          top: -10,
-                          left: 5,
-                          right: 220,
+                          top: -8,
+                          left: 3,
+                          right: 222,
                           child: Image(
                               image: AssetImage(
                                   'assets/images/splash_screen/5.png'))),
@@ -261,7 +261,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 height: 10.0,
                               ),
                               Text(
-                                'Create a friendly and structured work environment by connecting with other users',
+                                'Create friendly and structured work environment by connecting with users',
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(color: Colors.black),
                                   fontSize: 20.0,
