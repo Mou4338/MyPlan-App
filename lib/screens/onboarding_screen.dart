@@ -279,7 +279,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           children: [
                           ElevatedButton(
                           onPressed: () {
-                          Navigator.pushNamed(context, '/account');},
+                          Navigator.pushNamed(context, '/login');},
                           child: Text('Sign up'),
                           ),
                           SizedBox(
@@ -287,7 +287,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                            ),
                            ElevatedButton(
                            onPressed: () {
-                           Navigator.pushNamed(context, '/account');},
+                           Navigator.pushNamed(context, '/login');},
                            child: Text('Sign in'),
                             ),
                           ],

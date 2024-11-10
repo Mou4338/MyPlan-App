@@ -1,10 +1,11 @@
+import 'package:MyPlan/pages/homepage.dart';
+import 'package:MyPlan/pages/loginpage.dart';
+import 'package:MyPlan/pages/signuppage.dart';
+import 'package:MyPlan/screens/onboarding_screen.dart';
+import 'package:MyPlan/screens/splash_screen.dart';
+import 'package:MyPlan/theme/theme.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/homepage.dart';
-import 'package:flutter_application_1/pages/welcomepage.dart';
-import 'package:flutter_application_1/screens/onboarding_screen.dart';
-import 'package:flutter_application_1/screens/splash_screen.dart';
-import 'package:flutter_application_1/theme/theme.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   final savedTheme=await AdaptiveTheme.getThemeMode();
@@ -29,13 +30,13 @@ class _MyAppState extends State<MyApp> {
     builder: (light, dark) => 
      MaterialApp(
         theme: light,
-        darkTheme: dark,
         debugShowCheckedModeBanner: false,
         initialRoute: '/splash',
         routes: {
           '/splash':(context)=> SplashScreen(),
           '/onboard':(context)=>OnboardingScreen(),
-          '/account':(context)=> Accountpage(),
+          '/login':(context)=> loginPage(),
+          '/signup':(context)=>Signuppage(),
           '/home': (context) => HomePage(),
      },
     ),
